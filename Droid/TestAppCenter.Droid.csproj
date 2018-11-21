@@ -29,6 +29,11 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86_64;x86;armeabi</AndroidSupportedAbis>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>/Users/monojitdattams/Library/Developer/Xamarin/Keystore/AppCenterKey/AppCenterKey.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>abcd1234</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>appcenterkey</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>abcd1234</AndroidSigningKeyPass>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

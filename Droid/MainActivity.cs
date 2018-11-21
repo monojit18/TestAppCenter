@@ -23,7 +23,7 @@ namespace TestAppCenter.Droid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            AppCenter.Start("3d027b10-eccb-4943-b4ae-b915353349fc", typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("81e6286f-3c43-4ca4-afaf-8015abf34563", typeof(Analytics), typeof(Crashes));
             Analytics.TrackEvent("Main Acitivity loaded - Android");
 
             // Get our button from the layout resource,
