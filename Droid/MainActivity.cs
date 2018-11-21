@@ -40,7 +40,7 @@ namespace TestAppCenter.Droid
                 clickMeTextField.Text = clickMeButton.Text;
 
                 Analytics.TrackEvent("Button Clicked from  - Android");
-                //Crashes.GenerateTestCrash();
+                // Crashes.GenerateTestCrash();
             };
 
             viewMeButton.Click += delegate
