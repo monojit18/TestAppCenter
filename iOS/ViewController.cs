@@ -33,7 +33,7 @@ namespace TestAppCenter.iOS
                 var title = string.Format("{0} clicks!", count++);
                 ClickMeButton.SetTitle(title, UIControlState.Normal);
 
-                // Analytics.TrackEvent("Button Clicked from iOS");
+                Analytics.TrackEvent("Button Clicked from iOS");
 
                 //Crashes.GenerateTestCrash();
 
