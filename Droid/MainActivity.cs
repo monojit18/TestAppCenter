@@ -1,4 +1,5 @@
-﻿using DBG = System.Diagnostics;
+﻿using System;
+using DBG = System.Diagnostics;
 using Java.Interop;
 using Android.Content;
 using Android.App;
@@ -15,6 +16,19 @@ namespace TestAppCenter.Droid
     public class MainActivity : Activity
     {
 
+        private void GenerateDummyException()
+        {
+
+            try
+            {
+                int divByZero = 91 / int.Parse("0");
+            }
+            catch (DivideByZeroException ex)
+            {
+                Crashes.TrackError(ex);
+            }
+
+        }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,6 +55,8 @@ namespace TestAppCenter.Droid
 
                 Analytics.TrackEvent("Button Clicked from  - Android");
                 // Crashes.GenerateTestCrash();
+                GenerateDummyException();
+
             };
 
             viewMeButton.Click += delegate

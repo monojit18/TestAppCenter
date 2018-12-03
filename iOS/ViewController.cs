@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using UIKit;
@@ -12,7 +12,20 @@ namespace TestAppCenter.iOS
     public partial class ViewController : UIViewController
     {
         int count = 3;
-        private HttpClient _httpClient;
+
+        private void GenerateDummyException()
+        {
+
+            try
+            {
+                int divByZero = 42 / int.Parse("0");
+            }
+            catch (DivideByZeroException ex)
+            {
+                Crashes.TrackError(ex);
+            }
+
+        }
 
         public ViewController(IntPtr handle) : base(handle)
         {
@@ -33,9 +46,14 @@ namespace TestAppCenter.iOS
                 var title = string.Format("{0} clicks!", count++);
                 ClickMeButton.SetTitle(title, UIControlState.Normal);
 
-                // Analytics.TrackEvent("Button Clicked from iOS");
+                Analytics.TrackEvent($"Button Clicks from iOS - with Info",
+                                    new Dictionary<string, string>
+                                    {
+                                        { "Category", $"Testing - {count}" }
+                                    });
 
-                //Crashes.GenerateTestCrash();
+                // Crashes.GenerateTestCrash();
+                // GenerateDummyException();
 
             };
 
