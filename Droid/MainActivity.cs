@@ -9,6 +9,7 @@ using Android.OS;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Push;
 
 namespace TestAppCenter.Droid
 {
@@ -21,7 +22,7 @@ namespace TestAppCenter.Droid
 
             try
             {
-                int divByZero = 91 / int.Parse("0");
+                int divByZero = 92 / int.Parse("0");
             }
             catch (DivideByZeroException ex)
             {
@@ -36,6 +37,32 @@ namespace TestAppCenter.Droid
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+
+            if (AppCenter.Configured == false)
+            {
+
+                Push.PushNotificationReceived += async (sender, e) =>
+                {
+                    var summary = $"Push notification received:" +
+                                    $"\n\tNotification title: {e.Title}" +
+                                    $"\n\tMessage: {e.Message}";
+
+
+                    if (e.CustomData != null)
+                    {
+                        summary += "\n\tCustom data:\n";
+                        foreach (var key in e.CustomData.Keys)
+                        {
+                            summary += $"\t\t{key} : {e.CustomData[key]}\n";
+                            System.Diagnostics.Debug.WriteLine(summary);
+
+                        }
+                    }
+
+
+
+                };
+            }
 
             AppCenter.Start("81e6286f-3c43-4ca4-afaf-8015abf34563", typeof(Analytics), typeof(Crashes));
             Analytics.TrackEvent("Main Acitivity loaded - Android");
