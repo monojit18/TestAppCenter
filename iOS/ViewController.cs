@@ -11,7 +11,7 @@ namespace TestAppCenter.iOS
 {
     public partial class ViewController : UIViewController
     {
-        int count = 3;
+        int count = 0;
 
         private void GenerateDummyException()
         {
