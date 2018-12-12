@@ -93,7 +93,7 @@ namespace TestAppCenter.iOS
                 }
 
             AppCenter.Start("3d027b10-eccb-4943-b4ae-b915353349fc", typeof(Push), typeof(Analytics),
-                            typeof(Crashes));
+                            typeof(Crashes));// check dummy
             return true;
 
         }
