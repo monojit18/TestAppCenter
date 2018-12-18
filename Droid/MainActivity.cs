@@ -41,7 +41,7 @@ namespace TestAppCenter.Droid
             if (AppCenter.Configured == false)
             {
 
-                Push.PushNotificationReceived += async (sender, e) =>
+                Push.PushNotificationReceived += (sender, e) =>
                 {
                     var summary = $"Push notification received:" +
                                     $"\n\tNotification title: {e.Title}" +
@@ -59,12 +59,11 @@ namespace TestAppCenter.Droid
                         }
                     }
 
-
-
                 };
             }
 
-            AppCenter.Start("81e6286f-3c43-4ca4-afaf-8015abf34563", typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("81e6286f-3c43-4ca4-afaf-8015abf34563", typeof(Analytics),
+                            typeof(Crashes), typeof(Push));
             Analytics.TrackEvent("Main Acitivity loaded - Android");
 
             // Get our button from the layout resource,

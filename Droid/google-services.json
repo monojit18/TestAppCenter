@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "416988432042",
-    "firebase_url": "https://testnotificationhub-a6a9c.firebaseio.com",
-    "project_id": "testnotificationhub-a6a9c",
-    "storage_bucket": "testnotificationhub-a6a9c.appspot.com"
+    "project_number": "180173281660",
+    "firebase_url": "https://testappcenter-9f17b.firebaseio.com",
+    "project_id": "testappcenter-9f17b",
+    "storage_bucket": "testappcenter-9f17b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:416988432042:android:a8df536ebd2424f3",
+        "mobilesdk_app_id": "1:180173281660:android:a8df536ebd2424f3",
         "android_client_info": {
           "package_name": "com.monojitms.development.POCs"
         }
       },
       "oauth_client": [
         {
-          "client_id": "416988432042-u50mn6fdncrobo1bjrve1t72r48kehqi.apps.googleusercontent.com",
+          "client_id": "180173281660-rsglhgpkeoq7lbtkcbapoqmmjk6j81tn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDRvtw5yZvcFZ5-ESuKaEjXTHpfNaRicTg"
+          "current_key": "AIzaSyBLwsRuAUcuWA_NB14iYclN2xfC6dSi960"
         }
       ],
       "services": {
