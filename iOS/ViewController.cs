@@ -18,7 +18,7 @@ namespace TestAppCenter.iOS
 
             try
             {
-                int divByZero = 102 / int.Parse("0");
+                int divByZero = 105 / int.Parse("0");
             }
             catch (DivideByZeroException ex)
             {
