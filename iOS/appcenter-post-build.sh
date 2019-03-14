@@ -1,2 +1,2 @@
-msbuild $APPCENTER_SOURCE_DIRECTORY/Source/SmartHotel.Clients.UITests/SmartHotel.Clients.UITests.csproj /p:Configuration=Release 
-appcenter test run uitest --app $APP --devices $DEVICES --app-path $APPCENTER_OUTPUT_DIRECTORY/SmartHotel.Clients.iOS.ipa --test-series "master" --locale "en_US" --build-dir $APPCENTER_SOURCE_DIRECTORY/Source/SmartHotel.Clients.UITests/bin/Release --uitest-tools-dir $APPCENTER_SOURCE_DIRECTORY/Source/packages/Xamarin.UITest.*/tools --async --token $TOKEN
+msbuild $APPCENTER_SOURCE_DIRECTORY/UITests/TestAppCenter.UITests.csproj /p:Configuration=Debug 
+appcenter test run uitest --app $APP --devices $DEVICES --app-path $APPCENTER_OUTPUT_DIRECTORY/TestAppCenter.iOS.ipa --test-series "DEV" --locale "en_US" --build-dir $APPCENTER_SOURCE_DIRECTORY/UITests/bin/Debug --uitest-tools-dir $APPCENTER_SOURCE_DIRECTORY/packages/Xamarin.UITest.*/tools --async --token $TOKEN
