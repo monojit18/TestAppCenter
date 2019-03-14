@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,54 +22,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-Ac-vcx">
-                                <rect key="frame" x="131.5" y="353" width="151" height="30"/>
+                                <rect key="frame" x="147" y="318" width="121" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ClickMeButton" label="ClickMeButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8c5-KV-uFg"/>
+                                    <constraint firstAttribute="width" constant="121" id="KrR-NB-mpg"/>
+                                </constraints>
                                 <state key="normal" title="Click Me!">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <accessibility key="accessibilityConfiguration" identifier="ClickMeButton" label="ClickMeButton"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="203" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
-                                <rect key="frame" x="40" y="300" width="295" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="203">
+                                <rect key="frame" x="75.666666666666686" y="265" width="264" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ClickMeTextField" label="ClickMeTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="AKv-kf-KFS"/>
+                                    <constraint firstAttribute="height" constant="30" id="u3k-ez-FNj"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <accessibility key="accessibilityConfiguration" identifier="ClickMeTextField" label="ClickMeTextField"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="426">
-                                <rect key="frame" x="131.5" y="403" width="151" height="30"/>
+                                <rect key="frame" x="147" y="365" width="121" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ViewMeButton" label="ViewMeButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5od-Iz-fjO"/>
+                                    <constraint firstAttribute="width" constant="121" id="c42-gr-pQ9"/>
+                                </constraints>
                                 <state key="normal" title="View Me!">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <accessibility key="accessibilityConfiguration" identifier="ViewMeButton" label="ViewMeButton"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oBE-Ac-vcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HiD-uS-i16"/>
-                            <constraint firstItem="oBE-Ac-vcx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YgX-7e-bMc"/>
-                            <constraint id="204" firstAttribute="trailingMargin" secondItem="203" secondAttribute="trailing" constant="59"/>
-                            <constraint id="205" firstItem="203" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20"/>
-                            <constraint id="206" firstItem="oBE-Ac-vcx" firstAttribute="top" secondItem="203" secondAttribute="bottom" constant="23"/>
-                            <constraint id="425" firstAttribute="trailingMargin" secondItem="oBE-Ac-vcx" secondAttribute="trailing" constant="111"/>
-                            <constraint id="427" firstItem="426" firstAttribute="top" secondItem="oBE-Ac-vcx" secondAttribute="bottom" constant="20"/>
-                            <constraint id="428" firstAttribute="trailingMargin" secondItem="426" secondAttribute="trailing" constant="111"/>
-                            <constraint id="429" firstItem="426" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="111"/>
+                            <constraint firstItem="203" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="245" id="2Yj-n7-yVt"/>
+                            <constraint firstItem="oBE-Ac-vcx" firstAttribute="top" secondItem="203" secondAttribute="bottom" constant="23" id="7Cr-Vr-sQi"/>
+                            <constraint firstItem="426" firstAttribute="top" secondItem="oBE-Ac-vcx" secondAttribute="bottom" constant="17" id="Oor-UO-h1r"/>
+                            <constraint firstItem="oBE-Ac-vcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="SF8-VF-7FP"/>
+                            <constraint firstItem="426" firstAttribute="top" secondItem="oBE-Ac-vcx" secondAttribute="bottom" constant="17" id="bdn-cU-Icu"/>
+                            <constraint firstItem="203" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="cRi-Zw-aSs"/>
+                            <constraint firstItem="426" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="kcc-PZ-evP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ClickMeButton" destination="oBE-Ac-vcx" id="name-outlet-oBE-Ac-vcx"/>
                         <outlet property="ClickMeTextField" destination="203" id="name-outlet-203"/>
                         <outlet property="ViewMeButton" destination="426" id="name-outlet-426"/>
-                        <segue id="854" destination="654" kind="presentation" identifier="ViewMeSegue"/>
+                        <segue destination="654" kind="presentation" identifier="ViewMeSegue" id="854"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="-2"/>
+            <point key="canvasLocation" x="21.739129999999999" y="-2.4456519999999999"/>
         </scene>
+        <!--View Me View Controller-->
         <scene sceneID="653">
             <objects>
-                <viewController id="654" sceneMemberID="viewController" customClass="ViewMeViewController" storyboardIdentifier="ViewMeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                <viewController storyboardIdentifier="ViewMeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="654" customClass="ViewMeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="651"/>
                         <viewControllerLayoutGuide type="bottom" id="652"/>
@@ -73,46 +88,47 @@
                     <view key="view" contentMode="scaleToFill" id="655">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="1079" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
-                                <rect key="frame" x="50" y="353" width="314" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1079">
+                                <rect key="frame" x="66" y="318" width="283" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ViewMeTextField" label="ViewMeTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="3GW-C6-JcT"/>
+                                    <constraint firstAttribute="height" constant="30" id="bGD-IE-d8p"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <accessibility key="accessibilityConfiguration" identifier="ViewMeTextField" label="ViewMeTextField"/>
-                                <constraints>
-                                    <constraint id="1085" firstAttribute="height" constant="30"/>
-                                </constraints>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1326">
-                                <rect key="frame" x="131.5" y="403" width="151" height="30"/>
+                                <rect key="frame" x="147" y="365" width="121" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DoneButton" label="DoneButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="ePY-ys-ECN"/>
+                                    <constraint firstAttribute="height" constant="30" id="gbS-XU-YlR"/>
+                                </constraints>
                                 <state key="normal" title="I'm done!">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <accessibility key="accessibilityConfiguration" identifier="DoneButton" label="DoneButton"/>
-                                <constraints>
-                                    <constraint id="1371" firstAttribute="height" constant="30"/>
-                                </constraints>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint id="1082" firstItem="1079" firstAttribute="centerY" secondItem="655" secondAttribute="centerY"/>
-                            <constraint id="1090" firstItem="1079" firstAttribute="leading" secondItem="655" secondAttribute="leadingMargin" constant="30"/>
-                            <constraint id="1091" firstAttribute="trailingMargin" secondItem="1079" secondAttribute="trailing" constant="30"/>
-                            <constraint id="1346" firstItem="1326" firstAttribute="top" secondItem="1079" secondAttribute="bottom" constant="20"/>
-                            <constraint id="1347" firstItem="1326" firstAttribute="leading" secondItem="655" secondAttribute="leadingMargin" constant="111"/>
-                            <constraint id="1348" firstAttribute="trailingMargin" secondItem="1326" secondAttribute="trailing" constant="111"/>
+                            <constraint firstItem="1326" firstAttribute="top" secondItem="1079" secondAttribute="bottom" constant="17" id="Dh7-Bc-jbh"/>
+                            <constraint firstItem="1326" firstAttribute="top" secondItem="1079" secondAttribute="bottom" constant="17" id="SJW-Pg-a7O"/>
+                            <constraint firstItem="1079" firstAttribute="centerX" secondItem="655" secondAttribute="centerX" constant="0.5" id="a3c-x1-QBf"/>
+                            <constraint firstItem="1326" firstAttribute="centerX" secondItem="655" secondAttribute="centerX" constant="0.5" id="eCh-f1-Ca2"/>
+                            <constraint firstItem="1079" firstAttribute="top" secondItem="651" secondAttribute="bottom" constant="298" id="mha-e3-HwA"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ViewMeTextField" destination="1079" id="name-outlet-1079"/>
                         <outlet property="DoneButton" destination="1326" id="name-outlet-1326"/>
+                        <outlet property="ViewMeTextField" destination="1079" id="name-outlet-1079"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="656" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="-75"/>
+            <point key="canvasLocation" x="741" y="-2"/>
         </scene>
     </scenes>
 </document>
