@@ -1,0 +1,2 @@
+msbuild $APPCENTER_SOURCE_DIRECTORY/UITests/TestAppCenter.UITests.csproj /p:Configuration=Release 
+appcenter test run uitest --app $APP --devices $DEVICES --app-path $APPCENTER_OUTPUT_DIRECTORY/com.monojitms.development.POCs.apk --test-series $SERIES --locale "en_US" --build-dir $APPCENTER_SOURCE_DIRECTORY/UITests/bin/Debug --uitest-tools-dir $APPCENTER_SOURCE_DIRECTORY/packages/Xamarin.UITest.*/tools --async --token $TOKEN
