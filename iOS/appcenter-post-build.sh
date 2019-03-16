@@ -1,2 +1,2 @@
-msbuild $APPCENTER_SOURCE_DIRECTORY/UITests/TestAppCenter.UITests.csproj /p:Configuration=Debug 
+msbuild $APPCENTER_SOURCE_DIRECTORY/UITests/TestAppCenter.UITests.csproj /p:Configuration=$ENV 
 appcenter test run uitest --app $APP --devices $DEVICES --app-path $APPCENTER_OUTPUT_DIRECTORY/TestAppCenter.iOS.ipa --test-series "DEV" --locale "en_US" --build-dir $APPCENTER_SOURCE_DIRECTORY/UITests/bin/Debug --uitest-tools-dir $APPCENTER_SOURCE_DIRECTORY/packages/Xamarin.UITest.*/tools --async --token $TOKEN
