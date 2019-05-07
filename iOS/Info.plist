@@ -5,7 +5,7 @@
 	<key>CFBundleName</key>
 	<string>TestAppCenter</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.monojitms.distribution.AdHoc</string>
+	<string>com.monojitms.development.POCs</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
