@@ -22,7 +22,7 @@ namespace TestAppCenter.Droid
 
             try
             {
-                int divByZero = 92 / int.Parse("0");
+                int divByZero = 100 / int.Parse("0");
             }
             catch (DivideByZeroException ex)
             {
